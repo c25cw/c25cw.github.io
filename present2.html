@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style type="text/css">
+	
+.photo{
+	height:200px;
+	width:400px;
+	background-size:contain;
+	background-repeat: no-repeat;
+}
+
+#concert{
+	background-image: url(concert.png);
+	
+}
+
+#africa{
+	background-image:url(africa.png);
+	left:30%;
+}
+body{
+	background-color:rgb(241, 211, 214);
+	background-image: url(https://c.tenor.com/pz0zpQXlK5sAAAAi/sparkle-confetti.gif);
+}
+
+	</style>
+	<title></title>
+</head>
+<body>
+
+<div class="photo" id="concert"></div>
+
+<div class="photo" id="africa"></div>
+
+<audio id="song" src=scarletbegonias.mp3></audio>
+
+	<script type="text/javascript">
+		var song = document.getElementById("song");
+
+		document.addEventListener("click", function(){
+				song.play();
+		})
+	
+
+	</script>
+</body>
+</html>
