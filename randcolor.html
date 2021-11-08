@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+function circlecolor (){
+
+	var monke = document.createElement('div');
+	document.body.appendChild(monke);
+
+var red = Math.round(Math.random() * 255)
+var green = Math.round(Math.random() * 255)
+var blue = Math.round(Math.random() * 255)
+
+	monke.style.width = "70px";
+	monke.style.height = "70px";
+	monke.style.backgroundColor = "rgb("+ red+","+ green+","+ blue+")";
+	monke.style.borderRadius = "50%";
+	monke.style.position = "relative";
+	monke.style.display = "inline-block"
+
+	console.log( "rgb("+ red +"," + green +","+ blue + ")")
+}
+
+document.addEventListener("click", circlecolor)
+
+</script>
+
+
+</body>
+</html>
