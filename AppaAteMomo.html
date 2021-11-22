@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	function makeAppa(){
+
+		var appa = document.createElement("div")
+
+		document.body.appendChild(appa);
+
+		appa.style.backgroundImage = "url(appa.png)";
+		appa.style.height = "200px";
+		appa.style.width = "200px";
+		appa.style.backgroundSize = "contain";
+		appa.style.backgroundRepeat = "no-repeat";
+		appa.style.display = "inline-block"
+
+		appa.addEventListener("click", function(){
+			appa.style.backgroundImage = "url(momo.png)"
+
+		})
+	}
+
+setInterval(makeAppa, 500)
+
+</script>
+
+
+
+</body>
+</html>
