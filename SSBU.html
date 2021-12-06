@@ -10,36 +10,63 @@
 	height:775px;
 background-repeat:no-repeat;
 background-size:contain;
+position:absolute;
+top:8%;
 }
 
 
 #player1{
 	width:275px;
-	height:300px;
-	background-position:absolute;
+	height:275px;
+	position:absolute;
+	top:550px;
+	left:50px;
+	background-size:contain;
+	background-repeat:no-repeat;
 
 }
+
+#instructions{
+	position:absolute;
+	left:30%;
+}
+
 </style>
 
 	<title></title>
 </head>
 <body>
 
-<div id="background"></div>
+<div id="instructions">
+		<h1>Click Screen to Randomize Character</h1></div>
 
-<div id="player1"></div>
+
+<div id="background">
+
+	<div id="player1"></div>
+
+</div>
+
 
 <script type="text/javascript">
 	
 var player1 = document.getElementById('player1')
 
-	var characters = ["url(pikachuSSBU.png)", "url(captainfalcon.png)", "url(kirby.png)", "url(mario.png)", "url(kingkrool.png)", "url(donkeykong.png)", "url(corrin.png)", "url(cloud.png)", "url(greninja.png)", "url(younglink.png)"]
+var background = document.getElementById('background')
 
-	var random = Math.floor(Math.random()*11)
+	var characters = ["url(pikachuSSBU.png)", "url(captainfalcon.png)", "url(kirby.png)", "url(mario.png)", "url(kingkrool.png)", "url(donkeykong.png)", "url(corrin.png)", "url(cloud.png)", "url(greninja.png)", "url(younglink.png)", "url(link.png)", "url(samus.png)", "url(darksamus.png)", "url(yoshi.png)", "url(fox.png)", "url(luigi.png)", "url(ness.png)", "url(jiggs.png)", "url(peach.png)", "url(daisy.png)", "url(bowser.png)", "url(iceclimbers.png)", "url(sheik.png)", "url(zelda.png)", "url(drmario.png)", "url(pichu.png)", "url(falco.png)", "url(marth.png)", "url(lucina.png)", "url(ganon.png)"]
+
+function Pick(){
+
+	var random = Math.floor(Math.random()*30)
 
 console.log(random)
 
-	player1.backgroundImage = characters[random]
+	player1.style.backgroundImage = characters[random]
+}
+
+background.addEventListener("click", Pick)
+
 </script>
 
 </body>
