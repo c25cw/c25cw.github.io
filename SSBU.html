@@ -19,7 +19,7 @@ top:8%;
 	width:275px;
 	height:275px;
 	position:absolute;
-	top:550px;
+	top:535px;
 	left:50px;
 	background-size:contain;
 	background-repeat:no-repeat;
@@ -31,6 +31,29 @@ top:8%;
 	left:30%;
 }
 
+#forloopbackground{
+	width:1340px;
+	height:340px;
+	left:20px;
+	top:60px;
+	position:absolute;
+	/*background-color: red*/
+
+}
+
+#forloopbackground2{
+	width:1025px;
+	height:70px;
+	top:400px;
+	left:175px;
+	position:absolute;
+	/*background-color: red;*/
+}	
+
+
+
+
+
 </style>
 
 	<title></title>
@@ -38,12 +61,16 @@ top:8%;
 <body>
 
 <div id="instructions">
-		<h1>Click Screen to Randomize Character</h1></div>
+		<h1>Click on Character to Select Them</h1></div>
 
 
 <div id="background">
 
 	<div id="player1"></div>
+
+	<div id="forloopbackground"></div>
+
+	<div id ="forloopbackground2"></div>
 
 </div>
 
@@ -54,18 +81,75 @@ var player1 = document.getElementById('player1')
 
 var background = document.getElementById('background')
 
-	var characters = ["url(pikachuSSBU.png)", "url(captainfalcon.png)", "url(kirby.png)", "url(mario.png)", "url(kingkrool.png)", "url(donkeykong.png)", "url(corrin.png)", "url(cloud.png)", "url(greninja.png)", "url(younglink.png)", "url(link.png)", "url(samus.png)", "url(darksamus.png)", "url(yoshi.png)", "url(fox.png)", "url(luigi.png)", "url(ness.png)", "url(jiggs.png)", "url(peach.png)", "url(daisy.png)", "url(bowser.png)", "url(iceclimbers.png)", "url(sheik.png)", "url(zelda.png)", "url(drmario.png)", "url(pichu.png)", "url(falco.png)", "url(marth.png)", "url(lucina.png)", "url(ganon.png)"]
+	var characters = ["url(pikachuSSBU.png)", "url(captainfalcon.png)", "url(kirby.png)", "url(mario.png)", "url(kingkrool.png)", "url(donkeykong.png)", "url(corrin.png)", "url(cloud.png)", "url(greninja.png)", "url(younglink.png)", "url(link.png)", "url(samus.png)", "url(darksamus.png)", "url(yoshi.png)", "url(fox.png)", "url(luigi.png)", "url(ness.png)", "url(jiggs.png)", "url(peach.png)", "url(daisy.png)", "url(bowser.png)", "url(iceclimbers.png)", "url(sheik.png)", "url(zelda.png)", "url(drmario.png)", "url(pichu.png)", "url(falco.png)", "url(marth.png)", "url(lucina.png)", "url(ganon.png)", "url(mewtwo.png)", "url(roy.png)", "url(chrom.png)", "url(gameandwatch.png)", "url(metaknight.png)", "url(pit.png)", "url(darkpit.png)", "url(zss.png)", "url(wario.png)", "url(snake.png)", "url(ike.png)", "url(trainer.png)", "url(diddykong.png)"]
 
-function Pick(){
+// function Pick(){
 
-	var random = Math.floor(Math.random()*30)
+	// var random = Math.floor(Math.random()*43)
 
-console.log(random)
+// console.log(random)
 
-	player1.style.backgroundImage = characters[random]
-}
+	// player1.style.backgroundImage = characters[random]
+// }
 
-background.addEventListener("click", Pick)
+// background.addEventListener("click", Pick)
+
+var player1 = document.getElementById('player1')
+
+function makesquare (x) {
+
+	var square = document.createElement('div');
+	forloopbackground.appendChild(square);
+	square.style.width = "96px";
+	square.style.height = "64px";
+	// square.style.backgroundColor = "red";
+	square.style.display = "inline-block";
+	square.style.marginRight = "7px";
+		square.style.marginBottom = "2px";
+
+	square.style.backgroundRepeat = "no-repeat";
+	// square.style.border = "1px"
+
+	// square.style.backgroundImage = "url(" + x + ".png)";
+
+	square.style.backgroundSize = "contain";
+	square.style.id = "square" + x;
+
+square.addEventListener ('click', function(){
+player1.style.backgroundImage = "url(" + x + ".png)";
+})
+
+};
+	for (var i = 0; i<65; i++)
+		{makesquare(i);}
+
+	function makesquare2 (x) {
+
+var box = document.createElement('div');
+	forloopbackground2.appendChild(box);
+	box.style.width = "96px";
+	box.style.height = "64px";
+	// box.style.backgroundColor = "red";
+	box.style.display = "inline-block";
+	box.style.marginRight = "7px";
+		box.style.marginBottom = "2px";
+
+	box.style.backgroundRepeat = "no-repeat";
+	// box.style.border = "1px"
+
+	box.style.backgroundImage = "url(" + x + ".jpg)";
+
+	box.style.backgroundSize = "contain";
+	box.style.id = "box" + x;
+
+box.addEventListener ('click', function(){
+player1.style.backgroundImage = "url(" + x + ".png)";
+})
+
+};
+	for (var i = 65; i<74; i++)
+		{makesquare2(i);}
+	
 
 </script>
 

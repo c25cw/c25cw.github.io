@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	
+#bigsquare{
+	width:1920px;
+	height:1080px;
+	
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="bigsquare"></div>
+
+<script type="text/javascript">
+
+var bigsquare = document.getElementById("bigsquare")
+
+bigsquare.addEventListener("click",
+	function(colorchange){
+		console.log(colorchange.clientX, colorchange.clientY)})
+	
+
+
+
+</script>
+
+</body>
+</html>

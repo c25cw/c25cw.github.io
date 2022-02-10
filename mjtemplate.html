@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+	function makesquare (x) {
+
+	var square = document.createElement('div');
+	document.body.appendChild(square);
+	square.style.width = "96px";
+	square.style.height = "64px";
+	square.style.backgroundColor = "red";
+	square.style.display = "inline-block";
+	square.style.marginRight = "7px";
+		square.style.marginBottom = "2px";
+
+	square.style.backgroundRepeat = "no-repeat";
+	// square.style.border = "1px"
+
+
+	square.style.backgroundSize = "contain";
+	square.style.id = "square" + x;
+
+	square.addEventListener("click", function(){
+	square.innerText =  x;
+
+	})
+
+};
+
+for (var i = 0; i<65; i++)
+		{makesquare(i);}
+
+
+	</script>
+
+</body>
+</html>
