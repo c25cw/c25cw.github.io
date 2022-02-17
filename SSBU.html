@@ -50,6 +50,15 @@ top:8%;
 	/*background-color: red;*/
 }	
 
+#random{
+	width:96px;
+	height:64px;
+	/*background-color:red;*/
+	position:absolute;
+	top:405px;
+	left:1105px;
+}
+
 
 
 
@@ -72,6 +81,8 @@ top:8%;
 
 	<div id ="forloopbackground2"></div>
 
+	<div id="random"></div>
+
 </div>
 
 
@@ -81,11 +92,11 @@ var player1 = document.getElementById('player1')
 
 var background = document.getElementById('background')
 
-	var characters = ["url(pikachuSSBU.png)", "url(captainfalcon.png)", "url(kirby.png)", "url(mario.png)", "url(kingkrool.png)", "url(donkeykong.png)", "url(corrin.png)", "url(cloud.png)", "url(greninja.png)", "url(younglink.png)", "url(link.png)", "url(samus.png)", "url(darksamus.png)", "url(yoshi.png)", "url(fox.png)", "url(luigi.png)", "url(ness.png)", "url(jiggs.png)", "url(peach.png)", "url(daisy.png)", "url(bowser.png)", "url(iceclimbers.png)", "url(sheik.png)", "url(zelda.png)", "url(drmario.png)", "url(pichu.png)", "url(falco.png)", "url(marth.png)", "url(lucina.png)", "url(ganon.png)", "url(mewtwo.png)", "url(roy.png)", "url(chrom.png)", "url(gameandwatch.png)", "url(metaknight.png)", "url(pit.png)", "url(darkpit.png)", "url(zss.png)", "url(wario.png)", "url(snake.png)", "url(ike.png)", "url(trainer.png)", "url(diddykong.png)"]
+var random = document.getElementById('random')
 
 // function Pick(){
 
-	// var random = Math.floor(Math.random()*43)
+	// var random = Math.floor(Math.random()*74)
 
 // console.log(random)
 
@@ -148,8 +159,15 @@ player1.style.backgroundImage = "url(" + x + ".png)";
 
 };
 	for (var i = 65; i<74; i++)
-		{makesquare2(i);}
-	
+		{makesquare2(i);}	
+
+
+random.addEventListener("click", function(){
+			var randomNumber = Math.floor(Math.random()*74);
+			player1.style.backgroundImage ="url(" + randomNumber + ".png)";
+			console.log(randomNumber)
+
+		})
 
 </script>
 
