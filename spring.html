@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+	
+#calendar{
+	background-image: url(calendar.png);
+	width:1400px;
+	background-size:contain;
+	background-repeat: no-repeat;
+	height:850px;
+	left:200px;
+	position:absolute;
+}
+
+.date{
+width:145px;
+height:110px;
+	}
+
+
+#march25{
+	background-color:red;
+	position:absolute;
+	left:770px;
+	top:559px;
+}
+
+#march30{
+	background-color:red;
+	position:absolute;
+	left:478px;
+	top:669px;
+
+}
+
+#march20{
+	background-color:red;
+	position: absolute;
+	left:40px;
+	top:559px;
+
+}
+
+#march12{
+	background-color: red;
+	position: absolute;
+	left:915px;
+	top:336px;
+
+}
+
+#march10{
+	background-color: red;
+	position:absolute;
+	left:624px;
+	top:336px;
+
+}
+
+#popup{
+/*	background-color:grey;
+*/	position:absolute;
+	width:290px;
+	height:197.5px;
+	top:226px;
+	left:240px;
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:center;
+
+}
+
+#popup2{
+	background-color:grey;
+	position:absolute;
+	width:290px;
+	height:197.5px;
+	top:424px;
+	left:240px;
+}
+
+</style>
+
+	<title></title>
+</head>
+<body>
+
+<div id="calendar">
+	
+<div class="date" id="march25"></div>
+
+<div class="date" id="march30"></div>
+
+<div class="date" id="march20"></div>
+
+<div class="date" id="march12"></div>
+
+<div class="date" id="march10"></div>
+
+<div id="popup"></div>
+
+<div id="popup2"></div>
+
+</div>
+
+<script type="text/javascript">
+
+	var popup= document.getElementById("popup");
+	
+march25.addEventListener("click", function(){
+	popup.style.backgroundImage="url(forgottenland.jpg)";
+	popup2.innerText="Kirby and the Forgotten Land is the new 3D Kirby action, adventure game. It is developed by HAL studios and is set to release on Nintendo Switch on March 25th. This is Kirby's first 3D adventure. (I'm also gonna get it for my birthday:))";
+})
+
+
+
+march10.addEventListener("click", function(){
+	popup.style.backgroundImage="url(marioday.jpg)";
+	popup2.innerText="March 10th is Mario Day because Mar10 looks like mario. On this day many mario and nintendo games go on sale, and the whole world can celebrate the joy they've had playing mario together.";})
+
+march20.addEventListener("click", function(){
+	popup.style.backgroundImage="url(spring.jpg)";
+	popup2.innerText="March 20th is the first official day of spring in 2022! Happy spring everybody!";
+})
+
+march12.addEventListener("click", function(){
+	popup.style.backgroundImage="url(springbreak.jpg)";
+	popup2.innerText="On March 12th, it is the first day of my school's spring break! I will be off of school for two weeks. I'm going to go on vacation to Colorado and I'm very excited!";
+})
+
+march30.addEventListener("click", function(){
+	popup.style.backgroundRepeat = "no-repeat";
+	popup.style.backgroundPosition = "center";
+	popup.style.backgroundImage="url(birthday.jpg)";
+	popup2.innerText="March 30th is my birthday! I'm excited to celebrate with my family and friends. I'm also excited to recieve the new Kirby game (see March 25th).";})
+
+</script>
+
+
+</body>
+</html>

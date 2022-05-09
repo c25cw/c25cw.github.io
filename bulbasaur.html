@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+	
+	#id{
+/*background-color:red;*/
+background-image:url(lightbluebsaur.png);
+background-size:contain;
+background-repeat:no-repeat;
+width: 700px;
+height:700px;
+position: relative;
+top:125px;
+}
+
+#instructions{
+	position: absolute;
+left:420px;
+}
+</style>
+
+
+	<title></title>
+</head>
+<body>
+
+<div id="instructions"><h1>Click on Bulbasaur to change colors!</h1></div>
+
+<center><div id="id"></div></center>
+
+
+<script type="text/javascript">
+
+	var images = ["lightbluebsaur.png", "redbsaur.png", "aquabsaur.png", "darkgreenbsaur.png", "purplebsaur.png", "darkbluebsaur.png", "lightgreenbsaur.png"]
+	var counter = 0;
+	
+var bulbasaur = document.getElementById('id')
+
+bulbasaur.addEventListener('click', function(){console.log("hi")
+id.style.backgroundImage = "url("+ images[counter] +")"
+counter = counter + 1
+console.log(counter)
+if(counter>6){counter=0}
+
+})
+
+</script>
+
+</body>
+</html>
